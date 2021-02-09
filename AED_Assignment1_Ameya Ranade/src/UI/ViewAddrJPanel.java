@@ -19,7 +19,7 @@ public class ViewAddrJPanel extends javax.swing.JPanel {
     Person person;
     public ViewAddrJPanel(Person person) {
         initComponents();
-        
+        this.setSize(2000, 2000);
         this.person = person;
         displayPerson();
     }

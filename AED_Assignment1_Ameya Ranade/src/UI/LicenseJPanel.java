@@ -6,7 +6,11 @@
 package UI;
 
 import Data.Person;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -20,6 +24,7 @@ public class LicenseJPanel extends javax.swing.JPanel {
     Person person;
     public LicenseJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
     }
 
@@ -32,96 +37,171 @@ public class LicenseJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        chkBtn = new javax.swing.JButton();
         expdtTxt = new javax.swing.JTextField();
         lncsLbl = new javax.swing.JLabel();
         bldtypeTxt = new javax.swing.JTextField();
         lncsTxt = new javax.swing.JTextField();
         issuedtLbl = new javax.swing.JLabel();
         issuedtTxt = new javax.swing.JTextField();
-        picTxt = new javax.swing.JTextField();
         expdtLbl = new javax.swing.JLabel();
         picLbl = new javax.swing.JLabel();
         lcnsLbl = new javax.swing.JLabel();
         bldtypeLbl = new javax.swing.JLabel();
+        browseBtn = new javax.swing.JButton();
+        picTxt = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(java.awt.SystemColor.inactiveCaption);
-        setPreferredSize(new java.awt.Dimension(650, 500));
-        setLayout(null);
-
-        chkBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        chkBtn.setLabel("Save");
-        chkBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkBtnActionPerformed(evt);
-            }
-        });
-        add(chkBtn);
-        chkBtn.setBounds(288, 275, 80, 35);
+        setPreferredSize(new java.awt.Dimension(1000, 1000));
 
         expdtTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 expdtTxtActionPerformed(evt);
             }
         });
-        add(expdtTxt);
-        expdtTxt.setBounds(288, 146, 190, 23);
 
         lncsLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lncsLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lncsLbl.setText("License Number :");
-        add(lncsLbl);
-        lncsLbl.setBounds(146, 58, 120, 23);
-        add(bldtypeTxt);
-        bldtypeTxt.setBounds(288, 189, 190, 23);
 
         lncsTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lncsTxtActionPerformed(evt);
             }
         });
-        add(lncsTxt);
-        lncsTxt.setBounds(288, 60, 190, 23);
 
         issuedtLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         issuedtLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         issuedtLbl.setText("Date of Issue :");
-        add(issuedtLbl);
-        issuedtLbl.setBounds(155, 101, 110, 23);
 
         issuedtTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 issuedtTxtActionPerformed(evt);
             }
         });
-        add(issuedtTxt);
-        issuedtTxt.setBounds(288, 103, 190, 23);
-        add(picTxt);
-        picTxt.setBounds(288, 232, 190, 23);
 
         expdtLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         expdtLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         expdtLbl.setText("Date of Expirate :");
-        add(expdtLbl);
-        expdtLbl.setBounds(147, 144, 120, 23);
 
         picLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         picLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         picLbl.setText("Picture :");
-        add(picLbl);
-        picLbl.setBounds(150, 230, 120, 23);
 
         lcnsLbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lcnsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lcnsLbl.setText("Driver's License Information");
-        add(lcnsLbl);
-        lcnsLbl.setBounds(10, 11, 630, 29);
 
         bldtypeLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         bldtypeLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bldtypeLbl.setText("Blood Type :");
-        add(bldtypeLbl);
-        bldtypeLbl.setBounds(128, 187, 142, 23);
+
+        browseBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        browseBtn.setText("Browse");
+        browseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                browseBtnActionPerformed(evt);
+            }
+        });
+
+        picTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                picTxtActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setText("Save");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lcnsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(lncsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(lncsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(issuedtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(issuedtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(expdtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(expdtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bldtypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(bldtypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(picLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(browseBtn)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(picTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(3, 360, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(lcnsLbl)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lncsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(lncsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(issuedtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(issuedtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(expdtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(expdtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bldtypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(bldtypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(picLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(picTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(browseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap(692, Short.MAX_VALUE))
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {browseBtn, jButton1});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void expdtTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expdtTxtActionPerformed
@@ -135,28 +215,50 @@ public class LicenseJPanel extends javax.swing.JPanel {
     private void issuedtTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_issuedtTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_issuedtTxtActionPerformed
+                                       
+    private void browseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseBtnActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".jpg, .png, .jpeg", "jpg", "png", "jpeg");
+        fileChooser.setFileFilter(filter);
+        int selected = fileChooser.showOpenDialog(null);
+        if(selected == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            String getImagepath = file.getAbsolutePath();
+            JOptionPane.showMessageDialog(null, getImagepath);
+            ImageIcon myimage = new ImageIcon(getImagepath);
+            picTxt.setText(getImagepath);
+            person.setPicture(picTxt.getText());
+        
+        }
+    }//GEN-LAST:event_browseBtnActionPerformed
 
-    private void chkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkBtnActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         person.setLcnsnum(lncsTxt.getText());
         person.setIss_dt(issuedtTxt.getText());
-        person.setBld_type(bldtypeTxt.getText());
         person.setExp_dt(expdtTxt.getText());
-        person.setPicture(picTxt.getText());
+        person.setBld_type(bldtypeTxt.getText());
         
-        JOptionPane.showMessageDialog(this, "License Information Saved.");
+        JOptionPane.showMessageDialog(this, "Driver's License Information Saved.");
         
-    }//GEN-LAST:event_chkBtnActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void picTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picTxtActionPerformed
+        // TODO add your handling code here:
+        picTxt.setText("Use Browse button to specify path for image");
+    }//GEN-LAST:event_picTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bldtypeLbl;
     private javax.swing.JTextField bldtypeTxt;
-    private javax.swing.JButton chkBtn;
+    private javax.swing.JButton browseBtn;
     private javax.swing.JLabel expdtLbl;
     private javax.swing.JTextField expdtTxt;
     private javax.swing.JLabel issuedtLbl;
     private javax.swing.JTextField issuedtTxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lcnsLbl;
     private javax.swing.JLabel lncsLbl;
     private javax.swing.JTextField lncsTxt;

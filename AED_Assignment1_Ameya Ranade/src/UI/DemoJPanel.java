@@ -22,6 +22,7 @@ public class DemoJPanel extends javax.swing.JPanel {
     
     public DemoJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
     }
 

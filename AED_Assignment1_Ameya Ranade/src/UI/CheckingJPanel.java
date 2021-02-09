@@ -20,7 +20,7 @@ public class CheckingJPanel extends javax.swing.JPanel {
     Person person;
     public CheckingJPanel(Person person) {
         initComponents();
-        
+        this.setSize(2000, 2000);
         this.person = person;
     }
 
@@ -48,13 +48,10 @@ public class CheckingJPanel extends javax.swing.JPanel {
 
         setBackground(java.awt.SystemColor.inactiveCaption);
         setPreferredSize(new java.awt.Dimension(650, 500));
-        setLayout(null);
 
         chkLbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         chkLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         chkLbl.setText("Checking Account Information");
-        add(chkLbl);
-        chkLbl.setBounds(10, 11, 630, 29);
 
         chkBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chkBtn.setLabel("Save");
@@ -63,46 +60,32 @@ public class CheckingJPanel extends javax.swing.JPanel {
                 chkBtnActionPerformed(evt);
             }
         });
-        add(chkBtn);
-        chkBtn.setBounds(293, 275, 80, 35);
 
         chkaccTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chkaccTxtActionPerformed(evt);
             }
         });
-        add(chkaccTxt);
-        chkaccTxt.setBounds(293, 146, 190, 23);
 
         chkbnknameLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         chkbnknameLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chkbnknameLbl.setText("Bank Name :");
-        add(chkbnknameLbl);
-        chkbnknameLbl.setBounds(171, 58, 100, 23);
-        add(chkaccbalTxt);
-        chkaccbalTxt.setBounds(293, 189, 190, 23);
 
         chkbnknameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chkbnknameTxtActionPerformed(evt);
             }
         });
-        add(chkbnknameTxt);
-        chkbnknameTxt.setBounds(293, 60, 190, 23);
 
         chkrtngLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         chkrtngLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chkrtngLbl.setText("Routing Number :");
-        add(chkrtngLbl);
-        chkrtngLbl.setBounds(152, 101, 120, 23);
 
         chkrtngTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chkrtngTxtActionPerformed(evt);
             }
         });
-        add(chkrtngTxt);
-        chkrtngTxt.setBounds(293, 103, 190, 23);
 
         chkacctypeTxt.setEditable(false);
         chkacctypeTxt.setText("Checking");
@@ -111,26 +94,93 @@ public class CheckingJPanel extends javax.swing.JPanel {
                 chkacctypeTxtActionPerformed(evt);
             }
         });
-        add(chkacctypeTxt);
-        chkacctypeTxt.setBounds(293, 232, 190, 23);
 
         chkaccLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         chkaccLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chkaccLbl.setText("Checking Account Number :");
-        add(chkaccLbl);
-        chkaccLbl.setBounds(92, 144, 180, 23);
 
         chkacctypeLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         chkacctypeLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chkacctypeLbl.setText("Account Type :");
-        add(chkacctypeLbl);
-        chkacctypeLbl.setBounds(155, 230, 120, 23);
 
         chkaccbalLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         chkaccbalLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chkaccbalLbl.setText("Account Balance :");
-        add(chkaccbalLbl);
-        chkaccbalLbl.setBounds(133, 187, 142, 23);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(chkLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(171, 171, 171)
+                .addComponent(chkbnknameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addComponent(chkbnknameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(chkrtngLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(chkrtngTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(chkaccLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(chkaccTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(133, 133, 133)
+                .addComponent(chkaccbalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(chkaccbalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(chkacctypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(chkacctypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(293, 293, 293)
+                .addComponent(chkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(chkLbl)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkbnknameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(chkbnknameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkrtngLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(chkrtngTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkaccLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(chkaccTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkaccbalLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(chkaccbalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkacctypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(chkacctypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(chkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void chkbnknameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbnknameTxtActionPerformed

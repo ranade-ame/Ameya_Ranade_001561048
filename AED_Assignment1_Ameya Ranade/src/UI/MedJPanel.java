@@ -20,7 +20,7 @@ public class MedJPanel extends javax.swing.JPanel {
     Person person;
     public MedJPanel(Person person) {
         initComponents();
-        
+        this.setSize(2000, 2000);
         this.person = person;
     }
 

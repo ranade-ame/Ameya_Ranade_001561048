@@ -6,6 +6,7 @@
 package UI;
 
 import Data.Person;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -20,7 +21,7 @@ public class ReportJPanel extends javax.swing.JPanel {
     Person person;
     public ReportJPanel(Person person) {
         initComponents();
-        
+        this.setSize(2000, 2000);
         this.person = person;
         displayPerson();
     }
@@ -104,19 +105,17 @@ public class ReportJPanel extends javax.swing.JPanel {
         alrg2Lbl = new javax.swing.JLabel();
         bldtypeLbl = new javax.swing.JLabel();
         lncsTxt = new javax.swing.JTextField();
+        imageLbl = new javax.swing.JLabel();
 
         setBackground(java.awt.SystemColor.inactiveCaption);
         setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        setPreferredSize(new java.awt.Dimension(800, 500));
-        setLayout(null);
+        setPreferredSize(new java.awt.Dimension(850, 500));
 
         rprtLbl.setBackground(java.awt.SystemColor.activeCaption);
         rprtLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         rprtLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rprtLbl.setText("REPORT");
         rprtLbl.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(rprtLbl);
-        rprtLbl.setBounds(277, 11, 315, 28);
 
         jPanel1.setBackground(java.awt.SystemColor.activeCaption);
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -277,9 +276,6 @@ public class ReportJPanel extends javax.swing.JPanel {
         jLabel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel6);
         jLabel6.setBounds(13, 280, 224, 27);
-
-        add(jPanel1);
-        jPanel1.setBounds(10, 45, 250, 452);
 
         jPanel2.setBackground(java.awt.SystemColor.activeCaption);
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -445,9 +441,6 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel2.add(svngaccbalTxt);
         svngaccbalTxt.setBounds(119, 149, 100, 23);
 
-        add(jPanel2);
-        jPanel2.setBounds(278, 45, 250, 452);
-
         jPanel3.setBackground(java.awt.SystemColor.activeCaption);
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setPreferredSize(new java.awt.Dimension(250, 450));
@@ -601,8 +594,42 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel3.add(lncsTxt);
         lncsTxt.setBounds(114, 47, 102, 23);
 
-        add(jPanel3);
-        jPanel3.setBounds(546, 45, 238, 452);
+        imageLbl.setPreferredSize(new java.awt.Dimension(1000, 1000));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(277, 277, 277)
+                        .addComponent(rprtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(rprtLbl)
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void fnameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameTxtActionPerformed
@@ -710,6 +737,7 @@ public class ReportJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField fnameTxt;
     private javax.swing.JLabel hgtLbl;
     private javax.swing.JTextField hgtTxt;
+    private javax.swing.JLabel imageLbl;
     private javax.swing.JLabel issuedtLbl;
     private javax.swing.JTextField issuedtTxt;
     private javax.swing.JLabel jLabel1;
@@ -789,8 +817,9 @@ public class ReportJPanel extends javax.swing.JPanel {
         alrg2Txt.setText(person.getAlrg_2());
         alrg3Txt.setText(person.getAlrg_3());
         
-        
-        
+        String getImagepath = picTxt.getText();
+        ImageIcon myimage = new ImageIcon(getImagepath);
+        imageLbl.setIcon(myimage);    
         
         
         

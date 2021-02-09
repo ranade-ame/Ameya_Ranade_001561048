@@ -19,6 +19,7 @@ public class ViewSavingsJPanel extends javax.swing.JPanel {
     Person person;
     public ViewSavingsJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
         displayperson();
     }

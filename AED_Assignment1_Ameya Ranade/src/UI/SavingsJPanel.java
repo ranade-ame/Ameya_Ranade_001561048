@@ -20,6 +20,7 @@ public class SavingsJPanel extends javax.swing.JPanel {
     Person person;
     public SavingsJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
     }
 

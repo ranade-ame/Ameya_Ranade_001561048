@@ -20,6 +20,7 @@ public class ViewCheckingJPanel extends javax.swing.JPanel {
     Person person;
     public ViewCheckingJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
         displayperson();
     }

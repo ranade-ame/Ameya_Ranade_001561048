@@ -19,6 +19,7 @@ public class ViewMedJPanel extends javax.swing.JPanel {
     Person person;
     public ViewMedJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
         displayperson();
     }

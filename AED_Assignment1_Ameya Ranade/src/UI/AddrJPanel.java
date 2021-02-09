@@ -21,6 +21,7 @@ public class AddrJPanel extends javax.swing.JPanel {
     Person person;
     public AddrJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
     }
 

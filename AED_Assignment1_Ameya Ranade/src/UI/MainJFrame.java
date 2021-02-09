@@ -21,7 +21,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         person = new Person();
-        this.setSize(1050, 550);
+        this.setSize(2000, 2000);
         
     }
 

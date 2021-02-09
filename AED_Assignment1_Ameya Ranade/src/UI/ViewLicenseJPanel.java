@@ -6,6 +6,8 @@
 package UI;
 
 import Data.Person;
+import javax.swing.ImageIcon;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,8 +21,10 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
     Person person;
     public ViewLicenseJPanel(Person person) {
         initComponents();
+        this.setSize(2000, 2000);
         this.person = person;
         displayperson();
+        
     }
 
     /**
@@ -39,20 +43,18 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
         lncsTxt = new javax.swing.JTextField();
         issuedtLbl = new javax.swing.JLabel();
         issuedtTxt = new javax.swing.JTextField();
-        picTxt = new javax.swing.JTextField();
         expdtLbl = new javax.swing.JLabel();
         picLbl = new javax.swing.JLabel();
         lcnsLbl = new javax.swing.JLabel();
+        imageLbl = new javax.swing.JLabel();
+        pathTxt = new javax.swing.JTextField();
 
         setBackground(java.awt.SystemColor.inactiveCaption);
-        setPreferredSize(new java.awt.Dimension(650, 500));
-        setLayout(null);
+        setPreferredSize(new java.awt.Dimension(1000, 1000));
 
         bldtypeLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         bldtypeLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bldtypeLbl.setText("Blood Type :");
-        add(bldtypeLbl);
-        bldtypeLbl.setBounds(128, 187, 142, 23);
 
         expdtTxt.setEditable(false);
         expdtTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -60,14 +62,10 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
                 expdtTxtActionPerformed(evt);
             }
         });
-        add(expdtTxt);
-        expdtTxt.setBounds(288, 146, 190, 23);
 
         lncsLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lncsLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lncsLbl.setText("License Number :");
-        add(lncsLbl);
-        lncsLbl.setBounds(136, 58, 130, 23);
 
         bldtypeTxt.setEditable(false);
         bldtypeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -75,8 +73,6 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
                 bldtypeTxtActionPerformed(evt);
             }
         });
-        add(bldtypeTxt);
-        bldtypeTxt.setBounds(288, 189, 190, 23);
 
         lncsTxt.setEditable(false);
         lncsTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -84,14 +80,10 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
                 lncsTxtActionPerformed(evt);
             }
         });
-        add(lncsTxt);
-        lncsTxt.setBounds(288, 60, 190, 23);
 
         issuedtLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         issuedtLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         issuedtLbl.setText("Date of Issue :");
-        add(issuedtLbl);
-        issuedtLbl.setBounds(135, 101, 130, 23);
 
         issuedtTxt.setEditable(false);
         issuedtTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -99,35 +91,102 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
                 issuedtTxtActionPerformed(evt);
             }
         });
-        add(issuedtTxt);
-        issuedtTxt.setBounds(288, 103, 190, 23);
-
-        picTxt.setEditable(false);
-        picTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                picTxtActionPerformed(evt);
-            }
-        });
-        add(picTxt);
-        picTxt.setBounds(288, 232, 190, 23);
 
         expdtLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         expdtLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         expdtLbl.setText("Date of Expirate :");
-        add(expdtLbl);
-        expdtLbl.setBounds(137, 144, 130, 23);
 
         picLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         picLbl.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         picLbl.setText("Picture :");
-        add(picLbl);
-        picLbl.setBounds(150, 230, 120, 23);
 
         lcnsLbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lcnsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lcnsLbl.setText("Driver's License Information");
-        add(lcnsLbl);
-        lcnsLbl.setBounds(10, 11, 630, 29);
+
+        imageLbl.setPreferredSize(new java.awt.Dimension(200, 150));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addComponent(picLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bldtypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(3, 3, 3)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(bldtypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(pathTxt)
+                                        .addGap(10, 10, 10))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(expdtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(expdtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(issuedtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(issuedtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(lncsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(lncsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lcnsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(360, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(lcnsLbl)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lncsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(lncsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(issuedtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(issuedtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(expdtLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(expdtTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bldtypeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bldtypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(picLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pathTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(579, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void expdtTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expdtTxtActionPerformed
@@ -150,24 +209,20 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
         bldtypeTxt.setEditable(false);
     }//GEN-LAST:event_bldtypeTxtActionPerformed
 
-    private void picTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picTxtActionPerformed
-        // TODO add your handling code here:
-        picTxt.setEditable(false);
-    }//GEN-LAST:event_picTxtActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bldtypeLbl;
     private javax.swing.JTextField bldtypeTxt;
     private javax.swing.JLabel expdtLbl;
     private javax.swing.JTextField expdtTxt;
+    private javax.swing.JLabel imageLbl;
     private javax.swing.JLabel issuedtLbl;
     private javax.swing.JTextField issuedtTxt;
     private javax.swing.JLabel lcnsLbl;
     private javax.swing.JLabel lncsLbl;
     private javax.swing.JTextField lncsTxt;
+    private javax.swing.JTextField pathTxt;
     private javax.swing.JLabel picLbl;
-    private javax.swing.JTextField picTxt;
     // End of variables declaration//GEN-END:variables
 
     private void displayperson() {
@@ -176,6 +231,11 @@ public class ViewLicenseJPanel extends javax.swing.JPanel {
         issuedtTxt.setText(person.getIss_dt());
         expdtTxt.setText(person.getExp_dt());
         bldtypeTxt.setText(person.getBld_type());
-        picTxt.setText(person.getPicture());
+        pathTxt.setText(person.getPicture());
+        
+        String getImagepath = pathTxt.getText();
+        ImageIcon myimage = new ImageIcon(getImagepath);
+        imageLbl.setIcon(myimage);
+        
     }
 }
