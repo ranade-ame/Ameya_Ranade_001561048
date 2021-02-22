@@ -5,17 +5,17 @@
  */
 package src;
 
-import java.util.Scanner;
+import java.util.Date;
+import java.text.SimpleDateFormat;  
 
 /**
  *
  * @author ameya
  */
-public class VitalSigns {  
+public class VitalSigns {  //Consists of all the required variables for Vital Signs along with their respective Getters and Setters
      
     
     public String fname;
-    public String date;
     public float age;
     public double respRate;
     public double heartRate;
@@ -24,7 +24,16 @@ public class VitalSigns {
     public double wgtLbs; 
     public String ageGroup;
     public boolean status;
+    private Date time = new Date();
 
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+    
     public boolean isStatus() {
         return status;
     }
@@ -47,14 +56,6 @@ public class VitalSigns {
 
     public void setFname(String fname) {
         this.fname = fname;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
     
     public float getAge() {
@@ -107,8 +108,9 @@ public class VitalSigns {
     }
     
     @Override
-    public String toString(){
-        return date;
+    public String toString(){ //Set the format of the Time variable that records the time of the patient visit
+        SimpleDateFormat dt = new SimpleDateFormat("MM/dd/yyyy - hh:mm:ss");
+        return dt.format(time);
     }
     
 }

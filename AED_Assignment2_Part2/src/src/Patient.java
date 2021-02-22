@@ -15,19 +15,19 @@ import java.util.Scanner;
 
 public class Patient {
         
-    public static ArrayList<VitalSigns> vitalsh = new ArrayList<VitalSigns>();
+    public static ArrayList<VitalSigns> vitalsh = new ArrayList<VitalSigns>(); //ArrayList to store VitalSign objects is created and initialised
         
-    public VitalSigns newVitalSign(){
+    public VitalSigns newVitalSign(){ //Method to create a new Vital Sign object
         VitalSigns vs = new VitalSigns();
         return vs;
     }
     
-    public void getDetails(VitalSigns vs){
+    public void getDetails(VitalSigns vs){ //Method called to set the User Input values to the variables in Vital Signs.
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter full name: ");
         vs.setFname(scan.nextLine());
-        System.out.println("Enter date: ");
-        vs.setDate(scan.nextLine());
+        //System.out.println("Enter date: ");
+        //vs.setDate(scan.nextLine());
         System.out.println("Enter age : ");
         vs.setAge(scan.nextFloat());
         System.out.println("Enter respiratory rate : ");
@@ -43,7 +43,7 @@ public class Patient {
         
     }
     
-    public void getAgeGroup(VitalSigns vs){
+    public void getAgeGroup(VitalSigns vs){ //Checks the age value enterred by user and assigns the corresponding age group defined in the table
         if (vs.age == 0.1){
             vs.setAgeGroup("Newborn");
         }
@@ -64,7 +64,7 @@ public class Patient {
         }
     }
     
-    public Boolean isPatientnormal(VitalSigns vs) {      
+    public Boolean isPatientnormal(VitalSigns vs) {  //Method called to check if the values stored in each varaible are within their normal ranges defined in the assignment table    
         
         int x = 0;
         if ("Newborn".equals(vs.ageGroup)) {
@@ -109,12 +109,12 @@ public class Patient {
        }
     }
     
-    public void printhistory(){
+    public void printhistory(){ //Method called to print the details enterred as User Input and the corresponding status of the patient
                
         for (VitalSigns vs : vitalsh){
             
             System.out.println("\nFull name: " + vs.getFname());
-            System.out.println("Date: " + vs.getDate());
+            System.out.println("Time: " + vs.toString());
             System.out.println("Age: " + vs.getAge());
             System.out.println("Age group: " + vs.getAgeGroup());
             System.out.println("Respiratory Rate: " + vs.getRespRate());
@@ -126,9 +126,9 @@ public class Patient {
         }
     }
     
-    public Boolean isThisVitalSignNormal(String vsign){
-        Boolean value = null;
-        
+    public Boolean isThisVitalSignNormal(String vsign){ //Method that takes String vsign as input as defined by user
+        Boolean value = null;                           //Identifies the corresponding vitalsign variable and runs the corresponding method
+                                                        //to check whether the value of that variable is in normal range
         if(vsign.equals("Respiratory Rate")) {
             value = isRespRateNormal(); 
         }
@@ -144,7 +144,7 @@ public class Patient {
         return value;      
     }
     
-    public Boolean isRespRateNormal() {
+    public Boolean isRespRateNormal() { //A method for each Vital Sign variable to check if it is within normal range
         int x = 0;
         for (VitalSigns vs: vitalsh){
             
