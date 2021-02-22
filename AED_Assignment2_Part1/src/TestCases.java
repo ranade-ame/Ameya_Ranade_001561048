@@ -10,7 +10,7 @@
  */
 public class TestCases {
 
-    
+    // Each method takes VitalSign object as input and has hardcoded values for each age group
     void NewbornTestCase(VitalSigns vitalsigns) {
         vitalsigns.setAge((float) 0.1);
         vitalsigns.setRespRate(40);
@@ -18,8 +18,6 @@ public class TestCases {
         vitalsigns.setBldPressure(60);
         vitalsigns.setWgtKg(2.5);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
-        
     }
 
     void InfantTestCase(VitalSigns vitalsigns) {
@@ -29,7 +27,6 @@ public class TestCases {
         vitalsigns.setBldPressure(90);
         vitalsigns.setWgtKg(7);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
     }
 
     void TodderTestCase(VitalSigns vitalsigns) {
@@ -38,8 +35,7 @@ public class TestCases {
         vitalsigns.setHeartRate(100);
         vitalsigns.setBldPressure(95);
         vitalsigns.setWgtKg(12);
-        vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
+        vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462); 
     }
 
     void PreschoolerTestCase(VitalSigns vitalsigns) {
@@ -49,7 +45,6 @@ public class TestCases {
         vitalsigns.setBldPressure(95);
         vitalsigns.setWgtKg(16);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
     }
 
     void SchoolTestCase(VitalSigns vitalsigns) {
@@ -59,7 +54,6 @@ public class TestCases {
         vitalsigns.setBldPressure(100);
         vitalsigns.setWgtKg(30);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
     }
 
     void AdolescentTestCase(VitalSigns vitalsigns) {
@@ -69,8 +63,5 @@ public class TestCases {
         vitalsigns.setBldPressure(115);
         vitalsigns.setWgtKg(60);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
-        
     }
-
-    
 }

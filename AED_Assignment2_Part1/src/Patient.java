@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author ameya
  */
 public class Patient {
-    public void getDetails(VitalSigns vs){
+    public void getDetails(VitalSigns vs){ //Method called to set the User Input values to the variables in Vital Signs.
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter age : ");
         vs.setAge(scan.nextFloat());
@@ -27,10 +27,10 @@ public class Patient {
         vs.setWgtLbs(vs.wgtKg * 2.20462);
     }
     
-    public Boolean isPatientnormal(VitalSigns vs) {      
+    public Boolean isPatientnormal(VitalSigns vs) { //Method called to check if the values stored in each varaible are within their normal ranges defined in the assignment table
         
         int x = 0;
-        if ("Newborn".equals(vs.ageGroup)) {
+        if ("Newborn".equals(vs.ageGroup)) { 
             if((vs.respRate < 30 || vs.respRate >= 50) || (vs.heartRate < 120 || vs.heartRate >= 160) || (vs.bldPressure < 50 || vs.bldPressure >= 70) || (vs.wgtKg < 2 || vs.wgtKg >= 3) || (vs.wgtLbs < 4.5 || vs.wgtLbs >= 7)){
                 x = 1;
             }
@@ -69,7 +69,7 @@ public class Patient {
        }
     }
     
-    public void getAgeGroup(VitalSigns vs){
+    public void getAgeGroup(VitalSigns vs){ //Checks the age value enterred by user and assigns the corresponding age group defined in the table
         if (vs.age == 0.1){
             vs.setAgeGroup("Newborn");
         }
@@ -90,7 +90,7 @@ public class Patient {
         }
     }
     
-    public void printhistory(VitalSigns vs){
+    public void printhistory(VitalSigns vs){ //Method called to print the details enterred as User Input and the corresponding status of the patient
         System.out.println("Age: " + vs.getAge());
         System.out.println("Age group: " + vs.getAgeGroup());
         System.out.println("Respiratory Rate: " + vs.getRespRate());

@@ -19,15 +19,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 'Test Cases' to use Test Cases.\nEnter 'User Input' to enter values.\n");
-        String option = sc.nextLine();
+        String option = sc.nextLine(); //Get input from user regarding User Input to Test Cases
         
-        if ("User Input".equals(option)){
+        if ("User Input".equals(option)){ //If User Input, get input of Vital Signs variables from console
             
             Patient ptn = new Patient();
             VitalSigns vitalsigns1 = new VitalSigns();
             ptn.getDetails(vitalsigns1);
             ptn.getAgeGroup(vitalsigns1);
-            boolean statusvs1 = ptn.isPatientnormal(vitalsigns1);
+            boolean statusvs1 = ptn.isPatientnormal(vitalsigns1); //Returns the output of the isPatientnormal method and stores it
             vitalsigns1.status = statusvs1;
             System.out.println("\nPatient condition is normal? " + statusvs1);
             if (statusvs1 == false){
@@ -39,12 +39,12 @@ public class Main {
             ptn.printhistory(vitalsigns1);
         }
         
-        if ("Test Cases".equals(option)){
+        if ("Test Cases".equals(option)){ //If Test Cases, select one of the 6 cases and run to get True everytime
             TestCases ts = new TestCases();
             VitalSigns vitalsigns = new VitalSigns();
             Patient ptnTestCase = new Patient();
             Scanner sc2 = new Scanner(System.in);
-            System.out.println("Select the Test Case:\nNewborn\nInfant\nToddler\nPreschooler\nSchool\nAdolescent");
+            System.out.println("Select the Test Case:\nNewborn\nInfant\nToddler\nPreschooler\nSchool\nAdolescent"); //Take Input from user to determine which of 6 Test Cases to run
             String option2 = sc2.nextLine();
             if("Newborn".equals(option2)){
                 ts.NewbornTestCase(vitalsigns);
@@ -124,8 +124,6 @@ public class Main {
                 }
                 ptnTestCase.printhistory(vitalsigns);
             }
-            
-            
             
         }
         

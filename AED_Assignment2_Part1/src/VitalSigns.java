@@ -8,7 +8,7 @@
  *
  * @author ameya
  */
-public class VitalSigns {
+public class VitalSigns { //Consists of all the required variables for Vital Signs along with their respective Getters and Setters
     public float age;
     public double respRate;
     public double heartRate;
