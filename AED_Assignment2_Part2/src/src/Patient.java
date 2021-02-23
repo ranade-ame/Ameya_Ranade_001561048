@@ -24,7 +24,7 @@ public class Patient {
     
     public void getDetails(VitalSigns vs){ //Method called to set the User Input values to the variables in Vital Signs.
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter full name: ");
+        System.out.println("\nEnter full name: ");
         vs.setFname(scan.nextLine());
         //System.out.println("Enter date: ");
         //vs.setDate(scan.nextLine());
@@ -73,27 +73,27 @@ public class Patient {
             }
         }
         
-        if ("Infant".equals(vs.ageGroup)) {
+        else if ("Infant".equals(vs.ageGroup)) {
             if((vs.respRate < 20 || vs.respRate >= 30) || (vs.heartRate < 80 || vs.heartRate >= 140) || (vs.bldPressure < 70 || vs.bldPressure >= 100) || (vs.wgtKg < 4 || vs.wgtKg >= 10) || (vs.wgtLbs < 9 || vs.wgtLbs >= 22)){
                 x = 1;
             }
         }
-        if ("Toddler".equals(vs.ageGroup)) {
+        else if ("Toddler".equals(vs.ageGroup)) {
             if((vs.respRate < 20 || vs.respRate >= 30) || (vs.heartRate < 80 || vs.heartRate >= 130) || (vs.bldPressure < 80 || vs.bldPressure >= 110) || (vs.wgtKg < 10 || vs.wgtKg >= 14) || (vs.wgtLbs < 22 || vs.wgtLbs >= 31)){
                 x = 1;
             }
         }
-        if ("Preschooler".equals(vs.ageGroup)) {
+        else if ("Preschooler".equals(vs.ageGroup)) {
             if((vs.respRate < 20 || vs.respRate >= 30) || (vs.heartRate < 80 || vs.heartRate >= 120) || (vs.bldPressure < 80 || vs.bldPressure >= 110) || (vs.wgtKg < 14 || vs.wgtKg >= 18) || (vs.wgtLbs < 31 || vs.wgtLbs >= 40)){
                 x = 1;
             }
         }
-        if ("School Age".equals(vs.ageGroup)) {
+        else if ("School Age".equals(vs.ageGroup)) {
             if((vs.respRate < 20 || vs.respRate >= 30) || (vs.heartRate < 70 || vs.heartRate >= 110) || (vs.bldPressure < 80 || vs.bldPressure >= 120) || (vs.wgtKg < 20 || vs.wgtKg >= 42) || (vs.wgtLbs < 41 || vs.wgtLbs >= 92)){
                 x = 1;
             }
         }   
-        if ("Adolescent".equals(vs.ageGroup)) {
+        else if ("Adolescent".equals(vs.ageGroup)) {
             if((vs.respRate < 12 || vs.respRate >= 20) || (vs.heartRate < 55 || vs.heartRate >= 105) || (vs.bldPressure < 110 || vs.bldPressure >= 120) || (vs.wgtKg <= 50) || (vs.wgtLbs <= 110)){
                 x = 1;
             }
@@ -127,19 +127,22 @@ public class Patient {
     }
     
     public Boolean isThisVitalSignNormal(String vsign){ //Method that takes String vsign as input as defined by user
-        Boolean value = null;                           //Identifies the corresponding vitalsign variable and runs the corresponding method
-                                                        //to check whether the value of that variable is in normal range
-        if(vsign.equals("Respiratory Rate")) {
+        Boolean value = null;                           //Identifies the corresponding vitalsign variable and runs the corresponding method to check whether the value of that variable is in normal range
+        if((vsign.equals("Respiratory Rate")) || (vsign.equals("respiratory rate"))) {
             value = isRespRateNormal(); 
         }
-        else if (vsign.equals("Heart Rate")){
+        else if ((vsign.equals("Heart Rate")) || (vsign.equals("heart rate"))){
             value = isHeartRateNormal();
         }
-        else if (vsign.equals("Blood Pressure")){
+        else if ((vsign.equals("Blood Pressure")) || (vsign.equals("blood pressure"))){
             value = isBldPressureNormal();
         }
-        else if (vsign.equals("Weight")){
+        else if ((vsign.equals("Weight")) || (vsign.equals("weight"))){
             value = isWgtKgNormal();
+        }
+        else {
+            System.out.println("Invalid Input");
+            value = false;
         }
         return value;      
     }
@@ -153,27 +156,27 @@ public class Patient {
                     x = 1;
                 }
             }
-            if ("Infant".equals(vs.ageGroup)) {
+            else if ("Infant".equals(vs.ageGroup)) {
                 if(vs.respRate <= 20 || vs.respRate >= 30){
                     x = 1;
                 }
             }
-            if ("Toddler".equals(vs.ageGroup)) {
+            else if ("Toddler".equals(vs.ageGroup)) {
                 if(vs.respRate <= 20 || vs.respRate >= 30){
                 x = 1;
                 }
             }
-            if ("Preschooler".equals(vs.ageGroup)) {
+            else if ("Preschooler".equals(vs.ageGroup)) {
                 if(vs.respRate <= 20 || vs.respRate >= 30){
                     x = 1;
                 }
             }
-            if ("School Age".equals(vs.ageGroup)) {
+            else if ("School Age".equals(vs.ageGroup)) {
                 if(vs.respRate <= 20 || vs.respRate >= 30){
                     x = 1;
                 }
             }      
-            if ("Adolescent".equals(vs.ageGroup)) {
+            else if ("Adolescent".equals(vs.ageGroup)) {
                 if(vs.respRate <= 12 || vs.respRate >= 20){
                     x = 1;
                 }
@@ -196,27 +199,27 @@ public class Patient {
                     x = 1;
                 }
             }
-            if ("Infant".equals(vs.ageGroup)) {
+            else if ("Infant".equals(vs.ageGroup)) {
                 if(vs.heartRate <= 80 || vs.heartRate >= 140){
                     x = 1;
                 }
             }
-            if ("Toddler".equals(vs.ageGroup)) {
+            else if ("Toddler".equals(vs.ageGroup)) {
                 if(vs.respRate <= 20 || vs.respRate >= 30){
                     x = 1;
                 }
             }
-            if ("Preschooler".equals(vs.ageGroup)) {
+            else if ("Preschooler".equals(vs.ageGroup)) {
                 if(vs.heartRate <= 80 || vs.heartRate >= 120){
                     x = 1;
                 }
             }
-            if ("School Age".equals(vs.ageGroup)) {
+            else if ("School Age".equals(vs.ageGroup)) {
                 if(vs.heartRate <= 70 || vs.heartRate >= 110){
                     x = 1;
                 }
             }   
-            if ("Adolescent".equals(vs.ageGroup)) {
+            else if ("Adolescent".equals(vs.ageGroup)) {
                 if(vs.heartRate <= 55 || vs.heartRate >= 105){
                     x = 1;
                 }
@@ -239,27 +242,27 @@ public class Patient {
                     x = 1;
                 }
             }
-            if ("Infant".equals(vs.ageGroup)) {
+            else if ("Infant".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 70 || vs.bldPressure >= 100){
                     x = 1;
                 }
             }
-            if ("Toddler".equals(vs.ageGroup)) {
+            else if ("Toddler".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 110){
                     x = 1;
                 }
             }
-            if ("Preschooler".equals(vs.ageGroup)) {
+            else if ("Preschooler".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 110){
                     x = 1;
                 }
             }
-            if ("School Age".equals(vs.ageGroup)) {
+            else if ("School Age".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 120){
                     x = 1;
                 }
             }   
-            if ("Adolescent".equals(vs.ageGroup)) {
+            else if ("Adolescent".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 110 || vs.bldPressure >= 120){
                     x = 1;
                 }
@@ -282,27 +285,27 @@ public class Patient {
                     x = 1;
                 }
             }
-            if ("Infant".equals(vs.ageGroup)) {
+            else if ("Infant".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 70 || vs.bldPressure >= 100){
                     x = 1;
                 }
             }
-            if ("Toddler".equals(vs.ageGroup)) {
+            else if ("Toddler".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 110){
                     x = 1;
                 }
             }
-            if ("Preschooler".equals(vs.ageGroup)) {
+            else if ("Preschooler".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 110){
                     x = 1;
                 }
             }
-            if ("School Age".equals(vs.ageGroup)) {
+            else if ("School Age".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 80 || vs.bldPressure >= 120){
                     x = 1;
                 }
             }   
-            if ("Adolescent".equals(vs.ageGroup)) {
+            else if ("Adolescent".equals(vs.ageGroup)) {
                 if(vs.bldPressure <= 110 || vs.bldPressure >= 120){
                     x = 1;
                 }
