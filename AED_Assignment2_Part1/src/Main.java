@@ -46,7 +46,7 @@ public class Main {
                 VitalSigns vitalsigns = new VitalSigns();
                 Patient ptnTestCase = new Patient();
                 Scanner sc2 = new Scanner(System.in);
-                System.out.println("Select the Test Case:\nNewborn(Normal)\nInfant(Abnormal)\nToddler(Normal)\nPreschooler(Abnormal)\nSchool(Normal)\nAdolescent(Abnormal)"); //Take Input from user to determine which of 6 Test Cases to run
+                System.out.println("Select the Test Case:\nNewborn\nInfant\nToddler\nPreschooler\nSchool\nAdolescent"); //Take Input from user to determine which of 6 Test Cases to run
                 String option2 = sc2.nextLine();
                 if(("Newborn".equals(option2)) || ("newborn".equals(option2))){
                     ts.NewbornTestCase(vitalsigns);

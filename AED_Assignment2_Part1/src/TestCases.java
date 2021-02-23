@@ -22,7 +22,7 @@ public class TestCases {
 
     void InfantTestCase(VitalSigns vitalsigns) {
         vitalsigns.setAge((float) 0.9);
-        vitalsigns.setRespRate(5);
+        vitalsigns.setRespRate(25);
         vitalsigns.setHeartRate(100);
         vitalsigns.setBldPressure(90);
         vitalsigns.setWgtKg(7);
@@ -41,7 +41,7 @@ public class TestCases {
     void PreschoolerTestCase(VitalSigns vitalsigns) {
         vitalsigns.setAge((float) 4);
         vitalsigns.setRespRate(25);
-        vitalsigns.setHeartRate(10);
+        vitalsigns.setHeartRate(100);
         vitalsigns.setBldPressure(95);
         vitalsigns.setWgtKg(16);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
@@ -60,7 +60,7 @@ public class TestCases {
         vitalsigns.setAge((float) 20);
         vitalsigns.setRespRate(15);
         vitalsigns.setHeartRate(70);
-        vitalsigns.setBldPressure(15);
+        vitalsigns.setBldPressure(115);
         vitalsigns.setWgtKg(60);
         vitalsigns.setWgtLbs(vitalsigns.wgtKg * 2.20462);
     }

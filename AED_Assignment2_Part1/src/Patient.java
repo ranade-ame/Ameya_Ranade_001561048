@@ -94,6 +94,7 @@ public class Patient {
         System.out.println("Age: " + vs.getAge());
         System.out.println("Age group: " + vs.getAgeGroup());
         System.out.println("Respiratory Rate: " + vs.getRespRate());
+        System.out.println("Blood Pressure: " + vs.getBldPressure());
         System.out.println("Heart Rate: " + vs.getHeartRate());
         System.out.println("Weight(kg): " + vs.getWgtKg());
         System.out.println("Weight(Lbs): " + vs.getWgtLbs());
