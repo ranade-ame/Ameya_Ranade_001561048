@@ -235,18 +235,18 @@ public class Main {
     }
     
     public static void addStockPer(){
-        String [] name = {"Chandler Bing",  "Joey Tribianni", "Rachel Green", "Ross Geller", "Monica Geller", "Phoebe Buffay","Lois Britton","Amin Phillips","Susie Cresswell","Asha Gibbs","Jacob Page","Latisha Stark","Maddox Rayner","Hashim Willis","Lesley Mcpherson","Peggy Maxwell"};
-        String [] house = {"90 Bedford St 1", "90 Bedford St 1", "90 Bedford St 2", "91 Bedford St", "90 Bedford St 2", "1-15 Morton St 1","33 Lan","34 Lan","35 Lan","45 Lan","50 Lan","55 Lan","60 Lan","15 Lan","20 Lan","25 Lan"};
-        String [] community = {"Greenwich", "Greenwich","Greenwich","Greenwich","Greenwich","Greenwich", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline","Brookline","Brookline"};
-        String [] city = {"Boston", "Boston", "Boston", "Boston", "Boston", "Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston"};
-        String [] parents = {"Nora Tyler Bing", "Joseph Tribbiani Sr.", "Dr. Leonard Green", "Jack Geller", "Jack Geller", "Frank Buffay","","","","","","","","","",""};
-        float[] ages = {0.01f, 0.8f, 2f, 4f, 9f, 18f, 0.03f, 0.2f, 2f, 4f, 9f, 15f, 5f, 0.01f, 1.5f, 2f};
-        double [] resp = {15, 25, 25, 25, 25, 15, 12, 25, 25, 25, 25, 25, 25, 25, 25,25};
-        double [] heart = {140, 100, 100, 90, 80, 75, 140, 100, 120, 105, 115, 120, 150, 160, 105, 140};
-        double [] bldpres = {55, 80, 60, 90, 90, 115, 80, 90, 85, 100, 80, 90, 120, 100, 90, 85};
-        double [] wgt = {2.5, 7, 12, 25, 30, 60, 5, 8, 9, 10, 20, 35, 40, 55, 60, 65};
+        String [] name = {"Chandler Bing",  "Joey Tribianni", "Rachel Green", "Ross Geller", "Monica Geller", "Phoebe Buffay","Lois Britton","Amin Phillips","Susie Cresswell","Asha Gibbs","Jacob Page","Latisha Stark","Maddox Rayner","Hashim Willis","Lesley Mcpherson","Peggy Maxwell", "Angelica Barrett", "Neal Garza", "Angie Gross", "Rosa Wood", "Muriel Hall", "Kate Rivera", "Glenda Fields", "Bessie Singleton", "Caroline Ruiz", "Nora Leonard", "Zachary Bates", "Natasha Rios", "Jamie Taylor", "Sarah Henry"};
+        String [] house = {"90 Bedford St 1", "90 Bedford St 1", "90 Bedford St 2", "91 Bedford St", "90 Bedford St 2", "1-15 Morton St 1","33 Lan","34 Lan","35 Lan","45 Lan","50 Lan","55 Lan","60 Lan","15 Lan","20 Lan","25 Lan", "30 Beacon", "40 Boylston", "26 Lan", "28 Lan", "45 Boylston", "32 Beacon", "40 Bedford", "50 Beacon", "42 Boylston", "12 Lan", "18 Lan", "20 Beacon", "30 Boylston", "15 Lan"};
+        String [] community = {"Greenwich", "Greenwich","Greenwich","Greenwich","Greenwich","Greenwich", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline","Brookline","Brookline", "Greenwich", "Brookline", "Greenwich", "Brookline", "Greenwich", "Brookline", "Greenwich", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline", "Brookline"};
+        String [] city = {"Boston", "Boston", "Boston", "Boston", "Boston", "Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston","Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston", "Boston"};
+        String [] parents = {"Nora Tyler Bing", "Joseph Tribbiani Sr.", "Dr. Leonard Green", "Jack Geller", "Jack Geller", "Frank Buffay", "Krista Hansen", "Leah Mcgee", "Wilfred Baker", "Lillie Caldwell", "Lindsey Watson", "Harry Hubbard", "Nicholas Burke", "Juana Chapman", "Marlon Leonard", "Luz Hogan", "Felix Lucas", "Joanna Gill", "Emilio Boone", "Matthew Rose", "Beverly Bass", "Darryl Andrews", "Tricia Santiago", "Amber Cannon", "Traci Sanders", "Ryan Gibson", "Christian Beck", "Roger Collins", "Agnes Hart", "Jan Vasquez"};
+        float[] ages = {0.01f, 0.8f, 2f, 4f, 9f, 18f, 0.03f, 0.2f, 2f, 4f, 9f, 15f, 5f, 0.01f, 1.5f, 2f, 15f, 5f, 0.08f, 0.5f, 8f, 3f, 12f, 10f, 17f, 6f, 9f, 10f, 13f, 5f};
+        double [] resp = {15, 25, 25, 25, 25, 15, 12, 25, 25, 25, 25, 25, 25, 25, 25, 25, 35, 20, 22, 27, 29, 31, 33, 34, 23, 19, 12, 10, 11, 12};
+        double [] heart = {140, 100, 100, 90, 80, 75, 140, 100, 120, 105, 115, 120, 150, 160, 105, 140, 120, 130, 135, 130, 128, 125, 132, 145, 125, 142, 137, 127, 122, 105};
+        double [] bldpres = {55, 80, 60, 90, 90, 115, 80, 90, 85, 100, 80, 90, 120, 100, 90, 85, 57, 63, 70, 65, 90, 100, 113, 103, 98, 70, 60, 80, 93, 88};
+        double [] wgt = {2.5, 7, 12, 25, 30, 60, 5, 8, 9, 10, 20, 35, 40, 55, 60, 65, 2.5, 4.5, 8, 9, 4.7, 3.8, 8.8, 50, 25, 18, 30, 35, 27, 18};
 
-        for(int c = 0; c < 16; c++){
+        for(int c = 0; c < name.length; c++){
            Cities citiesStock = new Cities();
            VitalSigns vsper = VitalSigns.newVitalSign();
            Patient ptnper = Patient.newPatient();
