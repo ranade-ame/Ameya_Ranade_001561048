@@ -14,6 +14,7 @@ import CourseSchedule.CourseOffer;
 import CourseSchedule.CourseSchedule;
 import CourseSchedule.Seat;
 import CourseSchedule.SeatAssignment;
+import Department.Calendar;
 import Department.College;
 import Department.Department;
 import Department.DepartmentDirectory;
@@ -56,13 +57,16 @@ public class Main {
             generateCourseSchedule(d, sd1, fd1);
             assignStudents(d, sd1);
             generateEmployments(d);
+            Calendar cal = new Calendar(d);
+            cal.mastercatalog = d.mastercoursecatalog;
+            
         }
         
         int runcount = 0;
         Scanner scuser = new Scanner(System.in);
         while (runcount == 0){
             System.out.println("___________________________________________");
-            System.out.println("1. Person Information\n2. Department Information\n3. Calculate Revenue\n4. Employments\n0.Exit");
+            System.out.println("1. Person Information\n2. Department Information\n3. Calculate Revenue\n4. Employments\n5. Calendar\n0.Exit");
             int usrinp1 = scuser.nextInt();
             if (usrinp1 == 1) {
                 System.out.println("1. List of students\n2. List of faculty\n3. List of Employers\n4. List of all Persons");
@@ -106,6 +110,9 @@ public class Main {
             else if(usrinp1 == 4){
                 printJobs(dd);
             }
+            else if(usrinp1 == 5){
+                printCalendar(dd);
+            }
             else if(usrinp1 == 0){
                 runcount = 1;
             }
@@ -145,7 +152,7 @@ public class Main {
         }
         
         int z = 0;
-        while (z < 5){
+        while (z < 10){
             Person p = pd.newPerson(idnumbers[z], names[z], addresses[z], phonenums[z], "Faculty");
             z++;
         }
@@ -613,6 +620,38 @@ public class Main {
             System.out.println("_____________\n");
         }
     }
+
+    private static void printCalendar(DepartmentDirectory dd) {
+        int x = 1;
+        String[] sems = {"Fall 2020", "Spring 2021", "Fall 2021", "Spring 2022"};
+        for (Department d: dd.departmentlist){
+            System.out.println(x + ". " + d.name);
+            x++;
+        }
+        System.out.println("\nSelect a Department: \n0. Exit");
+        Scanner sc = new Scanner(System.in);
+        int usrinp = sc.nextInt();
+        if (usrinp > 0){
+            Department d = dd.departmentlist.get(usrinp - 1);
+            System.out.println("\nDepartment Name: " + d.name);
+            int y = 0;
+            while (y < sems.length){
+                CourseSchedule cs = d.getCourseSchedule(sems[y]);
+                System.out.println("_____________\n");
+                System.out.println("\nSemester: " + sems[y]);
+                for(CourseOffer co: cs.schedule){
+                    System.out.println("_____________");
+                    System.out.println("\nCourse Name: " + co.course.getName());
+                    System.out.println("Course Number: " + co.course.getCOurseNumber());
+                    System.out.println("Faculty: " + co.facultyassignment.facultyprofile.person.getName());
+                    System.out.println("Number of seats: " + co.seatlist.size());
+                }
+                y++;
+            }
+        }
+    }
+    
+    
     
 }
 

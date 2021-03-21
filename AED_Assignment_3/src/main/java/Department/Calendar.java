@@ -14,9 +14,10 @@ import java.util.HashMap;
  */
 public class Calendar {
     
-    HashMap<String, CourseSchedule> mastercatalog; 
-    
-    public Calendar(){
+    public HashMap<String, CourseSchedule> mastercatalog; 
+    //Set departmet mastercatalogue to this one and create a new print method to print
+    //courses sem wise for each department
+    public Calendar(Department d){
     mastercatalog = new HashMap<String, CourseSchedule>();    
     }
     
